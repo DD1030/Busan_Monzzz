@@ -25,11 +25,25 @@
 
         <menu>
             <item
-                android:id="@+id/nav_map"
+                android:id="@+id/nav_culture"
                 android:checkable="true"
                 android:icon="@drawable/ic_map"
-                android:title="지도로 한눈에 보기" />
-
+                android:title="문화 / 관광 한눈에 보기" />
+            <item
+                android:id="@+id/nav_eat"
+                android:checkable="true"
+                android:icon="@drawable/ic_map"
+                android:title="음식점 / 카페 한눈에 보기" />
+            <item
+                android:id="@+id/nav_publicTrans"
+                android:checkable="true"
+                android:icon="@drawable/ic_map"
+                android:title="대중교통 한눈에 보기" />
+            <item
+                android:id="@+id/nav_medical"
+                android:checkable="true"
+                android:icon="@drawable/ic_map"
+                android:title="의료시설 한눈에 보기" />
         </menu>
 
     </item>

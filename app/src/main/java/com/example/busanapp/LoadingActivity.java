@@ -15,13 +15,14 @@ import android.view.MenuItem;
 import com.example.busanapp.calendar.CalendarFragment;
 import com.example.busanapp.ui.home.BusFragment;
 import com.example.busanapp.ui.home.DisabledFragment;
+import com.example.busanapp.ui.home.EatFragment;
 import com.example.busanapp.ui.home.FindFoodFragment;
 import com.example.busanapp.ui.home.FindHospitalFragment;
-import com.example.busanapp.ui.home.FoodFragment;
 import com.example.busanapp.home.HomeFragment;
-import com.example.busanapp.ui.home.MapFragment;
-import com.example.busanapp.ui.home.HospitalFragment;
+import com.example.busanapp.ui.home.CultureFragment;
+import com.example.busanapp.ui.home.MedicalFragment;
 import com.example.busanapp.ui.home.ParkingFragment;
+import com.example.busanapp.ui.home.PublicTransFragment;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.List;
@@ -105,9 +106,21 @@ public class LoadingActivity extends AppCompatActivity implements NavigationView
                         new CalendarFragment()).commit();
                 break;
 
-            case R.id.nav_map:
+            case R.id.nav_culture:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new MapFragment()).commit();
+                        new CultureFragment()).commit();
+                break;
+            case R.id.nav_eat:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new EatFragment()).commit();
+                break;
+            case R.id.nav_publicTrans:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new PublicTransFragment()).commit();
+                break;
+            case R.id.nav_medical:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new MedicalFragment()).commit();
                 break;
             default:
                 break;

@@ -1,7 +1,6 @@
 package com.example.busanapp.ui.home;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -50,7 +49,7 @@ import java.util.ArrayList;
 import static android.content.Context.LOCATION_SERVICE;
 
 
-public class MapFragment extends Fragment implements OnMapReadyCallback {
+public class EatFragment extends Fragment implements OnMapReadyCallback {
 
 
     // 구글 서버로 부터 받아온 데이터를 저장할 리스트
@@ -65,12 +64,12 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
 
     // 다이얼로그를 구성하기 위한 배열
     String[] category_name_array={
-            "모두","ATM","은행","미용실","카페","교회","주유소","식당"
+            "모두","바","카페","음식점","베이커리"
     };
 
     // types 값 배열
     String[] category_value_array={
-            "all","atm","bank","beauty_salon","cafe","church","gas_station","restaurant"
+            "all","bar","cafe","restaurant","bakery"
     };
 
     //체크할 권한 배열
@@ -111,7 +110,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     }
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstance){
-        View view = inflater.inflate(R.layout.fragment_map, container, false);
+        View view = inflater.inflate(R.layout.fragment_eat, container, false);
 
         FragmentManager fm = getChildFragmentManager();
         SupportMapFragment map_frag =(SupportMapFragment)fm.findFragmentById(R.id.map);
